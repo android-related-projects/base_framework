@@ -33,12 +33,12 @@ dependencies {
 }
 
 //region Publish to jCenter
-def libGroupId = 'tn.seif.framework.base'
+def libGroupId = 'tn.seif.framework'
 def libArtifactId = 'base'
-def libVersion = '0.0.1'
+def libVersion = '1.0.0'
 def libDesc = 'Android framework containing base classes, and utils'
 def libLicenses = ['Apache-2.0']
-def libVCSUrl = ''
+def libVCSUrl = 'https://github.com/android-related-projects/base_framework.git'
 
 // Generate Source Jar
 task sourceJar(type: Jar) {
@@ -68,7 +68,7 @@ bintray {
     key = properties.getProperty("bintray.apikey")
     publications = ['MyPublication']
     pkg {
-        repo = "tn.seif.framework.base"
+        repo = "tn.seif.framework"
         name = "$libGroupId:$libArtifactId"
         desc = libDesc
         licenses = libLicenses
@@ -79,5 +79,6 @@ bintray {
             released = new Date()
         }
     }
+    publish = true
 }
 //endregion

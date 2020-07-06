@@ -111,7 +111,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         }
     }
 
-    interface PermissionsListener {
+    public interface PermissionsListener {
         void onFinished(boolean allGranted);
     }
 }
